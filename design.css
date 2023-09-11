@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Milonga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');  /*cursive font rotate*/
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap'); /*SIGNUP*/
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap'); /*signip*/
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    /* font-family: 'Montserrat', sans-serif; */
+}
+
+html,body{
+    overflow: hidden;
+    height: 100%;
+    width: 100vw;
+    overflow-y: scroll;
+}
+#nav{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    /* background-color: rgb(0, 0, 0); */
+    align-items: center;
+    justify-content: flex-start;
+    text-transform: uppercase;
+    position:fixed;  /*so that poori web me nav hamare saath rahe */
+    z-index: 9;  /*means z axis pr ye element aage rhega */ 
+    justify-content: end;
+}
+#navlink{
+    display:flex;
+    padding:  10%;
+    position:relative;
+    text-align: right;
+    gap: 20px;
+}
+#navlink a{
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+#navlink :hover{
+    color: rgb(228, 170, 95);
+    transition: all ease 0.5s;
+}
+@media (max-width:900px) {
+    
+}
+/* #navlink::after{
+    content:'';
+    width:0%;
+    height: 2px;
+    background:  rgb(255, 80, 80);
+    display:flex;
+    margin:auto;
+    transition: 0.25s;
+}
+#navlink:hover::after{
+    width: 100%
+} */
+ 
+/* #nav img{
+    height: 80px;
+    border-radius: 20px;
+    padding: 0 10%;
+    text-align: right;
+}  */
+/* #nav h4{
+    font-size: 13px;
+    font-weight: 400;
+} */
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    /* z-index: -1; */
+}
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.533);
+}
+#page{
+    height: 100vh;  /*vh means screen ki height*/
+    width: 100%;
+    position: relative; /*coz iske childerens relative rehte hai*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column ;
+    text-align: center;
+}
+#page h3{
+    display: flex;
+    flex-direction: column;
+    transform: rotate(-25deg);
+    position: absolute;
+    left: 9%;
+    bottom: 64%;
+    font-size: 2vw;
+    color: rgb(255, 255, 255);
+    font-family: 'Cedarville Cursive', cursive;
+    font-weight: 100;
+} 
+#page h1{
+    font-size: 10vw;
+    font-family: 'Vidaloka', serif;
+    /* font-family: 'Milonga', cursive; */
+    color: #FBEAEB;
+    position: relative;
+    word-spacing: 10px;
+    transition: ease-in-out 0.5s;
+}
+#page h1::before{
+    content: "Shabd Sahare ~";
+    position: absolute;
+    color:   #3b58a3;
+    top: -0.2vw;
+    left: -0.2vw;
+    /* -webkit-text-stroke: 0.1px #FBEAEB; */
+    /* z-index: -1; */
+    /* comment out zindex and webkit for another design*/
+}
+#page h1:hover{
+    text-shadow: 1px 0px 5px #FBEAEB;
+}
+#page h2{
+    font-size:2vw;
+    /* font-family: 'Rajdhani', sans-serif; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    color: rgba(198, 220, 239, 0.746);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#page p{
+    font-size:13px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+    width: 50%;
+}
+
+#page2{
+    height: 100vh;
+    width: 100%;   
+    position: relative;
+    text-align: center;
+    justify-content: center;
+}
+
+/* #scroller{
+    display: flex;
+    justify-content: flex-start;
+    /* background-color: aliceblue; */
+    /* width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+} */
+#scroller{
+    white-space: nowrap;
+    /* overflow-x: auto;
+    overflow-y: hidden; */
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+#scroll{
+    /* overflow-wrap: break-word; */
+    display:inline-block; 
+    white-space: nowrap;
+    animation: scrolll 16s ease-in-out infinite;
+}
+#scroll h4{
+    display:inline-block;
+    font-size: 90px;
+    font-weight: 1000;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(165, 200, 246);
+    margin-right: 10px;
+    transition: ease-in-out 0.5s;
+}
+#scroll h4:hover{
+    color: rgb(228, 170, 95);
+}
+@keyframes scrolll {
+    0%{
+        transform: translateX(100vw);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+#what{
+    display: flex;
+    height: 30%;
+    width: 100%;
+    /* background-color: rgb(205, 196, 196); */
+    align-items:center;
+    justify-content: space-around;
+    padding: 0 50px;
+}
+/* #what img{
+    height: 150px;
+    width: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: ease-in-out 0.5s; 
+} */
+#what_i{
+    width: 70%;
+    text-align: center;
+    position: relative;
+    margin-top: 10%;
+    font-size: 33px;
+}
+#what_i a{
+    color: #3b58a3;
+    font-family: 'Satisfy', cursive;
+    transition: ease-in-out 0.4s;
+    /* margin-bottom: 30x; */
+    text-decoration: none;
+}
+#what_i a:hover{
+    color: rgb(228, 170, 95);
+}
+@media (max-width: 730px){
+    #what_i a{font-size: 25px;}
+    #what_i{
+        width: 90%;
+        text-align: center;
+        position: relative;
+    }
+}   
+
+#what_i p{
+    font-family: 'Satisfy', cursive;
+    font-size: 22px;
+}
+@media (max-width: 730px){
+    #what_i p{font-size: 16px;}
+}
+
+
+
+
+#signup{
+    position: relative;
+    display:flex;
+    width: 70%;
+    background: linear-gradient(to right top,#f79898,#5885e8);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: 15%;
+    margin-bottom: 112px;
+    border-radius: 10px;
+    transition: ease-in-out 0.3s;
+    
+}
+/* #signup:hover{
+    margin-top: 90px;
+    margin-inline-start: 15.5%;
+    /* box-shadow: -4px 4px 1px 3px #bea7a7; */
+#signup:hover{
+    box-shadow: -10px 11px 5px 0 rgb(0, 0, 0), -10px 13px 5px 0 rgb(113, 147, 222);
+    margin-inline-start: 16%;
+    margin-top: 90px;
+}
+
+/* #signup img{
+    height: 120px;
+    width: 20%;
+    object-fit: cover;
+    border-radius: 10px;
+} */
+.exp{
+    /* display: flex; */
+    text-align: center;
+    padding: 20px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000000;
+}
+.exp h4{
+    background-color: #ff9a2600;
+    /* height: 40%; */
+    /* overflow-x: scroll;
+    overflow-y: scroll; */
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: rgb(251, 251, 251);
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.exp button{
+    margin-top: 10px;
+    width: 110px;
+    height: 30px;
+    font-size: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    transition: all 0.4s;
+}
+.exp button a{
+    color: #000000;
+    text-decoration: dotted;
+}
+.exp button:hover{
+    box-shadow: -5px 5px 1px 3px black;
+    margin-inline-end: 14px;
+    margin-top: 14px;
+}
+.exp button i{
+    color: #000000;
+}
+
+/* @media (max-width: 800px){
+    #signup{
+        width: 70%;
+        height: auto;
+    }
+    #signup h1{font-size: 12px;}
+}
+@media(min-width: 701px){
+    #signup h1{font-size: 22px;}
+} */
+
+@media(max-width: 700px){
+    #signup img{
+        width:20%;
+        height: 80%;
+        justify-content: center;
+    }
+    .exp button{
+        width: 80px;
+        height: 20px;
+        font-size: 15px;
+    }
+    .exp h4{
+        font-size: 15px;
+    }
+}
+
+/* #signup h1::-webkit-scrollbar{
+    display: none;
+} */
+/* @keyframes marqueee {
+    0%{
+        transform: translateY(70%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(-40%);
+    }
+} */
+
+
+
+footer{
+    /* height: 100px;
+    overflow-y: scroll; */
+    margin-top: 30px;
+    width: 100%;
+    position: relative;
+    /* bottom: 0px; */
+    background-color: #000000;
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    box-shadow: 0px 10px 20px 10px #483313;
+    display: flex;
+}
+.row{
+    width:100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+   
+}
+.col{
+    width: 33%;
+    text-align: center;
+    padding: 10px;
+    
+}
+.col h3{
+    position: relative;
+    margin-bottom: 10px;
+    color:#f0b86a;
+}
+.col p{
+    color: #76797f;
+}
+.col a{
+   display: inline-block;
+   text-decoration: none;
+}
+.col a:hover{
+    text-decoration: none;
+    color:#6d6d6d;
+}
+.col i{
+    width: fit-content;
+    font-size: 22px;
+    color: #7b7b7b;
+    padding: 3px;
+}
+form{
+    padding-bottom: 10px;
+    align-items:center;
+    display: flex;
+    border-bottom: 0.5px solid rgb(255, 255, 255);
+    margin-bottom: 20px;
+    justify-content: start;
+}
+form input{
+    width: 150px;
+    background: transparent;
+    /* border: 0; */
+    outline: none;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+@media (max-width:870px) {
+    footer{
+        bottom: unset;
+    }
+    .col{
+        width: 100%;
+    }
+}
+/* @media (max-height:870px) {
+    footer{
+        bottom: unset;
+    }
+    .col{
+        width: 100%;
+    }
+} */
+
+
